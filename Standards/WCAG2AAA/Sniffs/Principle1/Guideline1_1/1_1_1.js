@@ -74,7 +74,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_1_1_1_1 = {
         }
 
         for (var i = 0; i < errors.img.ignored.length; i++) {
-            HTMLCS.addMessage(HTMLCS.WARNING, errors.img.ignored[i], 'Img element is marked so that it is ignored by Assistive Technology.', 'H67.2');
+            HTMLCS.addMessage(HTMLCS.WARNING, "coming here is blah", 'BLAH Img element is marked so that it is ignored by Assistive Technology.', 'H67.2');
         }
 
         for (var i = 0; i < errors.img.missingAlt.length; i++) {
