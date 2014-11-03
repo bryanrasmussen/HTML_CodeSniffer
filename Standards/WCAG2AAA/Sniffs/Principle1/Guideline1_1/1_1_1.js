@@ -65,6 +65,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_1_1_1_1 = {
         var errors = this.testNullAltText(top);
 
         for (var i = 0; i < errors.img.emptyAltInLink.length; i++) {
+            HTMLCS.addMessage(HTMLCS.ERROR, "What comes here eh?", 'HEre comes the location info', 'H30.2');
             HTMLCS.addMessage(HTMLCS.ERROR, errors.img.emptyAltInLink[i], 'Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.', 'H30.2');
         }
 
