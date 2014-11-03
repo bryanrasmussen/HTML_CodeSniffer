@@ -78,7 +78,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_1_1_1_1 = {
         }
 
         for (var i = 0; i < errors.img.missingAlt.length; i++) {
-            HTMLCS.addMessage(HTMLCS.ERROR, errors.img.missingAlt[i], 'Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.', 'H37');
+            HTMLCS.addMessage(HTMLCS.ERROR, errors.img.missingAlt[i], 'WHAT IS THIS NIW Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.', 'H37');
         }
 
         for (var i = 0; i < errors.img.generalAlt.length; i++) {

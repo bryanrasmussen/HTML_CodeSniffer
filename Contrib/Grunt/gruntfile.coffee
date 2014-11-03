@@ -3,9 +3,6 @@ module.exports = (grunt)->
     pkg: grunt.file.readJSON('../../package.json')
 
     jshint: 
-      options: 
-        jshintrc: 'Integration/Grunt/.jshintrc'
-
       all: [
         'Standards/**/*.js'
         'PhantomJS/*.js'
