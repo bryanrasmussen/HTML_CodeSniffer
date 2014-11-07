@@ -192,14 +192,23 @@ var HTMLCS = new function()
      */
     this.addMessage = function(type, element, msg, code, data) {
         code = _getMessageCode(code);
-
-        _messages.push({
+        var id =  'htmlcs_' + Math.random().toString(36).substr(2, 9);
+        id = id + "_" + Date.now(),toString();
+        var current_msg = {
             type: type,
             element: element,
             msg: _msgOverrides[code] || msg,
             code: code,
             data: data
+        };
+        var push_message = JSON.stringify(current_msg);
+        var body = document.getElementsByTagName("body");
+        var addedimg = "<img src='http://localhost:5000/htmclsreport?report=" + push_message + "&id=" + id + "' alt='this image just puts in some stuff'>";
+        _messages.push({
+           current_msg
         });
+        body[0].innerHTML = body[0].innerHTML + addedimg;
+        
     };
 
     /**
