@@ -202,14 +202,18 @@ var HTMLCS = new function()
             data: data
         };
         var push_message = JSON.stringify(current_msg);
-        var body = document.getElementsByTagName("body");
         var newimg = document.createElement("img"); 
         newimg.setAttribute("src","http://localhost:5000/htmclsreport?report=" + push_message + "&id=" + id);
         newimg.setAttribute("alt", "this image just puts in some stuff");
+        document.body.appendChild(newimg);
         _messages.push({
-           current_msg
+           type: type,
+            element: element,
+            msg: _msgOverrides[code] || msg,
+            code: code,
+            data: data
         });
-        body[0].appendChild(newimg);
+        
         
     };
 
