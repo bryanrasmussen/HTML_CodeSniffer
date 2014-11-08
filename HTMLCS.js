@@ -203,11 +203,13 @@ var HTMLCS = new function()
         };
         var push_message = JSON.stringify(current_msg);
         var body = document.getElementsByTagName("body");
-        var addedimg = "<img src='http://localhost:5000/htmclsreport?report=" + push_message + "&id=" + id + "' alt='this image just puts in some stuff'>";
+        var newimg = document.createElement("img"); 
+        newimg.setAttribute("src","http://localhost:5000/htmclsreport?report=" + push_message + "&id=" + id);
+        newimg.setAttribute("alt", "this image just puts in some stuff");
         _messages.push({
            current_msg
         });
-        body[0].innerHTML = body[0].innerHTML + addedimg;
+        body[0].innerHTML.appendChild(newimg);
         
     };
 
