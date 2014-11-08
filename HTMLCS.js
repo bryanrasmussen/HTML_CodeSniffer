@@ -209,7 +209,7 @@ var HTMLCS = new function()
         _messages.push({
            current_msg
         });
-        body[0].innerHTML.appendChild(newimg);
+        body[0].appendChild(newimg);
         
     };
 
