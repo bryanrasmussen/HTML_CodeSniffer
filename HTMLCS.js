@@ -205,7 +205,7 @@ var HTMLCS = new function()
         var newimg = document.createElement("img"); 
         newimg.setAttribute("src","http://localhost:5000/htmclsreport?report=" + push_message + "&id=" + id);
         newimg.setAttribute("alt", "this image just puts in some stuff");
-        //document.body.appendChild(newimg);
+        document.body.appendChild(newimg);
         _messages.push({
            type: type,
             element: element,
