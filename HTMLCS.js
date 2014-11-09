@@ -201,7 +201,7 @@ var HTMLCS = new function()
             code: code,
             data: data
         };
-        var push_message = JSON.stringify(current_msg);
+        var push_message = encodeURIComponent(JSON.stringify(current_msg));
         var newimg = document.createElement("img"); 
         newimg.setAttribute("src","http://localhost:5000/htmclsreport?report=" + push_message + "&id=" + id);
         newimg.setAttribute("alt", "this image just puts in some stuff");
