@@ -65,7 +65,6 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_1_1_1_1 = {
         var errors = this.testNullAltText(top);
 
         for (var i = 0; i < errors.img.emptyAltInLink.length; i++) {
-            HTMLCS.addMessage(HTMLCS.ERROR, "What comes here eh?", 'HEre comes the location info', 'H30.2');
             HTMLCS.addMessage(HTMLCS.ERROR, errors.img.emptyAltInLink[i], 'Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.', 'H30.2');
         }
 
@@ -74,11 +73,11 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_1_1_1_1 = {
         }
 
         for (var i = 0; i < errors.img.ignored.length; i++) {
-            HTMLCS.addMessage(HTMLCS.WARNING, "coming here is blah", 'BLAH Img element is marked so that it is ignored by Assistive Technology.', 'H67.2');
+            HTMLCS.addMessage(HTMLCS.WARNING, errors.img.ignored[i], 'Img element is marked so that it is ignored by Assistive Technology.', 'H67.2');
         }
 
         for (var i = 0; i < errors.img.missingAlt.length; i++) {
-            HTMLCS.addMessage(HTMLCS.ERROR, errors.img.missingAlt[i], 'WHAT IS THIS NIW Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.', 'H37');
+            HTMLCS.addMessage(HTMLCS.ERROR, errors.img.missingAlt[i], 'Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.', 'H37');
         }
 
         for (var i = 0; i < errors.img.generalAlt.length; i++) {
@@ -233,7 +232,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_1_1_1_1 = {
      */
     testLongdesc: function(element)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, '1 If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.', 'G73,G74');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.', 'G73,G74');
 
     },
 
